@@ -1,19 +1,17 @@
 name:basic
 
-on:push
+on: push
 
 jobs:
 build_and_test:
     name: Build and test
     runs-on: ubuntu-latest
-basic:
-name:basic code base
-runs-on:ubuntu-latest
+
 steps:
--name:Checkout code
- uses:actions/checkout@v2
- -name:Run basic
- uses:github/basic@v3
+      -name: Checkout code
+       uses: actions/checkout@v2
+      -name: Run basic
+       uses: github/basic@v3
  env:
- DEFAULT_BRANCH:MAIN
-GITHUB_TOKEN:${{secrets.GITHUB_TOKENS}}
+ DEFAULT_BRANCH: MAIN
+GITHUB_TOKEN: ${{secrets.GITHUB_TOKENS}}
