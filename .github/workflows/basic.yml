@@ -1,15 +1,16 @@
 name: basic
 on: push
+env:
+  DEFAULT_BRANCH: MAIN
+  GITHUB_TOKEN: ${{secrets.GITHUB_TOKENS}}
+
 jobs:
-build_and_test:
+  job1:
     name: Build and test
     runs-on: ubuntu-latest
 
-steps:
-      -name: Checkout code
-       uses: actions/checkout@v2
-      -name: Run basic
-       uses: github/basic@v3
- env:
- DEFAULT_BRANCH: MAIN
-GITHUB_TOKEN: ${{secrets.GITHUB_TOKENS}}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Run basic
+      uses: github/basic@v3
