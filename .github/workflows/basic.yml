@@ -1,5 +1,4 @@
-name:basic
-
+name: basic
 on: push
 jobs:
 build_and_test:
