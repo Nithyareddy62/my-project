@@ -2,7 +2,7 @@ name:basic
 
 on:push
 
-jobs :
+jobs:
 basic:
 name:basic code base
 runs-on:ubuntu-latest
