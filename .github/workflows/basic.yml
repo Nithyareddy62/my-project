@@ -3,6 +3,9 @@ name:basic
 on:push
 
 jobs:
+build_and_test:
+    name: Build and test
+    runs-on: ubuntu-latest
 basic:
 name:basic code base
 runs-on:ubuntu-latest
