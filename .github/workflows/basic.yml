@@ -1,6 +1,7 @@
 name:basic
 
-on: push
+on :
+push:
 
 jobs:
 build_and_test:
