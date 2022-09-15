@@ -1,0 +1,15 @@
+name:basic
+
+on:push
+jobs:
+basic:
+name:basic code base
+runs-on:ubuntu-latest
+steps:
+-name:Checkout code
+ uses:actions/checkout@v2
+ -name:Run basic
+ uses:github/basic@v3
+ env:
+ DEFAULT_BRANCH:MAIN
+GITHUB_TOKEN:${{secrets.GITHUB_TOKENS}}
